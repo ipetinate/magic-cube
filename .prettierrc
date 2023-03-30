@@ -5,7 +5,7 @@
   "singleQuote": true,
   "editorconfig": true,
   "jsxSingleQuote": true,
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "bracketSpacing": false,
   "singleAttributePerLine": true,
   "endOfLine": "lf",
