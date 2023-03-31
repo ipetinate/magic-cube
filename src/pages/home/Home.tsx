@@ -1,3 +1,4 @@
+import logo from '/logo.webp'
 import viteLogo from '/vite.svg'
 import reactLogo from '../../assets/react.svg'
 import zustandLogo from '../../assets/zustand.png'
@@ -5,6 +6,7 @@ import tailwindLogo from '../../assets/tailwind.webp'
 import reactQueryLogo from '../../assets/react-query.png'
 
 import './Home.styles.css'
+import { Link } from 'react-router-dom'
 
 type PoweredBy = {
   url: string
@@ -50,7 +52,11 @@ export function Home() {
   return (
     <div className='app'>
       <div className='magic-cube'>
-        <span className='magic-cube-logo text-9xl'>{'🧊'}</span>
+        <img
+          src={logo}
+          alt='Magic Cbe logo'
+          className='magic-cube-logo'
+        />
         <h1 className='text-6xl'>Magic Cube</h1>
       </div>
 
@@ -81,20 +87,21 @@ export function Home() {
         </div>
       </div>
 
-      {/* <div className='flex flex-col gap-5 max-w-2xl mx-auto items-center justify-center'>
-    <p>
-      Anda perdendo tempo escolhendo coisas básicas na hora de configurar um
-      projeto simples?
-    </p>
+      <div className='flex flex-row gap-12 styled-link-container'>
+        <Link
+          to='/about'
+          className='styled-link'
+        >
+          Sobre
+        </Link>
 
-    <p>Como desenvolvedor web </p>
-
-    <p>
-      Uni as melhores tecnologias atuais para criar um template simples e
-      performático, não perca tempo escolhendo quais tecnologias deveria
-      configurar quando precisar criar um novo projeto Web simples.
-    </p>
-  </div> */}
+        <Link
+          to='/about'
+          className='styled-link'
+        >
+          Como usar
+        </Link>
+      </div>
     </div>
   )
 }

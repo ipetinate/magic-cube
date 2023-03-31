@@ -17,6 +17,17 @@
   filter: drop-shadow(0 0 2em #64ffffaa);
 }
 
+.styled-link {
+  @apply text-3xl uppercase p-2 rounded-xl bg-slate-900;
+
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.styled-link:hover {
+  filter: drop-shadow(0 0 1em #59c1e086);
+}
+
 .read-the-docs {
   @apply text-emerald-500;
 }
