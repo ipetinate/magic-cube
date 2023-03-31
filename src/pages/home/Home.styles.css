@@ -1,0 +1,68 @@
+.app {
+  @apply h-screen w-full;
+  @apply flex flex-col gap-10;
+  @apply items-center content-center justify-center;
+}
+
+.magic-cube {
+  @apply flex flex-col gap-10;
+  @apply items-center content-center justify-center;
+  @apply text-cyan-400;
+
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.magic-cube:hover {
+  filter: drop-shadow(0 0 2em #64ffffaa);
+}
+
+.read-the-docs {
+  @apply text-emerald-500;
+}
+
+.logos {
+  @apply flex flex-row gap-5 max-w-7xl mx-auto items-center justify-center;
+}
+
+.logo {
+  @apply h-24;
+
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #8064ffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61b6fbaa);
+}
+
+.logo.react-query:hover {
+  filter: drop-shadow(0 0 2em #fbf161aa);
+}
+
+.logo.tailwind:hover {
+  filter: drop-shadow(0 0 2em #61fbe6aa);
+}
+
+.logo.zustand:hover {
+  filter: drop-shadow(0 0 2em #fb9261aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
